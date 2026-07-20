@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Styles de navigation ajoutés localement pour la simplicité */
+      nav { padding: 0.75rem 1rem; background: #f7f7f7; border-bottom: 1px solid #e6e6e6; }
+      nav .nav { list-style: none; margin: 0; padding: 0; display: flex; gap: 1rem; align-items: center; }
+      nav .nav li { margin: 0; }
+      nav a { text-decoration: none; color: #0366d6; font-weight: 500; }
+      nav a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
+    <!-- Barre de navigation ajoutée -->
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="history.html">Historique</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
     <div class="calculator">
         <div class="display" id="display">0</div>
         <div class="buttons">
