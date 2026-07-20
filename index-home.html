@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator & Digital Clock - Web Apps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: slideUp 0.6s ease-in;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .project-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .project-header h2 {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .project-header p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .features-list li {
+            padding: 8px 0;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 15px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .project-card {
+                animation-delay: 0.2s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Web Apps Collection</h1>
+            <p>Interactive applications built with HTML, CSS & JavaScript</p>
+        </header>
+
+        <div class="projects-grid">
+            <!-- Calculator Card -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🧮</div>
+                    <h2>Simple Calculator</h2>
+                    <p>Professional Calculator with Modern UI</p>
+                </div>
+                <div class="project-content">
+                    <ul class="features-list">
+                        <li>Basic arithmetic operations</li>
+                        <li>Percentage support</li>
+                        <li>Decimal numbers</li>
+                        <li>Clear & delete functions</li>
+                        <li>Smooth animations</li>
+                        <li>Fully responsive</li>
+                    </ul>
+                    <a href="index.html" class="btn">Open Calculator</a>
+                </div>
+            </div>
+
+            <!-- Digital Clock Card -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">🌍</div>
+                    <h2>Digital Clock</h2>
+                    <p>World Clock with 27 Time Zones</p>
+                </div>
+                <div class="project-content">
+                    <ul class="features-list">
+                        <li>27 global time zones</li>
+                        <li>Live time updates</li>
+                        <li>Date with day name</li>
+                        <li>Time zone selector</li>
+                        <li>Grid view display</li>
+                        <li>Fully responsive</li>
+                    </ul>
+                    <a href="clock.html" class="btn">Open Clock</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Web Apps Collection. All rights reserved.</p>
+            <p>Created by <strong>Bill Gatte</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/mbillgatte-web" target="_blank">GitHub</a>
+                <a href="https://github.com/mbillgatte-web/Calculator" target="_blank">Repository</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
