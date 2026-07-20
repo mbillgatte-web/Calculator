@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="clock-styles.css">
+</head>
+<body>
+    <div class="clock-container">
+        <h1>World Clock</h1>
+        
+        <div class="timezone-selector">
+            <label for="timezone-select">Select Time Zone:</label>
+            <select id="timezone-select">
+                <option value="UTC">UTC (Coordinated Universal Time)</option>
+                <option value="America/New_York">New York (EST/EDT)</option>
+                <option value="America/Chicago">Chicago (CST/CDT)</option>
+                <option value="America/Denver">Denver (MST/MDT)</option>
+                <option value="America/Los_Angeles">Los Angeles (PST/PDT)</option>
+                <option value="America/Anchorage">Anchorage (AKST/AKDT)</option>
+                <option value="Pacific/Honolulu">Honolulu (HST)</option>
+                <option value="Europe/London">London (GMT/BST)</option>
+                <option value="Europe/Paris">Paris (CET/CEST)</option>
+                <option value="Europe/Berlin">Berlin (CET/CEST)</option>
+                <option value="Europe/Moscow">Moscow (MSK)</option>
+                <option value="Asia/Dubai">Dubai (GST)</option>
+                <option value="Asia/Kolkata">India (IST)</option>
+                <option value="Asia/Bangkok">Bangkok (ICT)</option>
+                <option value="Asia/Shanghai">Shanghai (CST)</option>
+                <option value="Asia/Tokyo">Tokyo (JST)</option>
+                <option value="Asia/Seoul">Seoul (KST)</option>
+                <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                <option value="Australia/Sydney">Sydney (AEDT/AEST)</option>
+                <option value="Australia/Melbourne">Melbourne (AEDT/AEST)</option>
+                <option value="Pacific/Auckland">Auckland (NZDT/NZST)</option>
+                <option value="Africa/Cairo">Cairo (EET)</option>
+                <option value="Africa/Johannesburg">Johannesburg (SAST)</option>
+                <option value="America/Toronto">Toronto (EST/EDT)</option>
+                <option value="America/Mexico_City">Mexico City (CST/CDT)</option>
+                <option value="America/Sao_Paulo">São Paulo (BRT/BRST)</option>
+                <option value="America/Buenos_Aires">Buenos Aires (ART)</option>
+            </select>
+        </div>
+
+        <div class="clock-display-main">
+            <div class="time" id="main-time">00:00:00</div>
+            <div class="timezone-name" id="main-timezone">UTC</div>
+            <div class="date" id="main-date">Monday, January 01, 2024</div>
+        </div>
+
+        <div class="all-timezones">
+            <h2>All Time Zones</h2>
+            <div class="timezone-grid" id="timezone-grid">
+                <!-- Clock cards will be generated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="clock-script.js"></script>
+</body>
+</html>
